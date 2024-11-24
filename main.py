@@ -56,6 +56,7 @@ ver = "Beta 0.1"
 pygame.init()
 mixer.init()
 DISPLAYSURF = pygame.display.set_mode((800, 600))
+boom = pygame.mixer.Sound("boo.wav")
 img = pygame.image.load('Assets/Images/icon.png')
 pygame.mixer.music.load("epiksoundtrack.mp3")
 pygame.mixer.music.set_volume(0.7) 
@@ -99,7 +100,7 @@ while True:
 
 
     for event in pygame.event.get():
-        
+        DISPLAYSURF.fill(black)
         jmoney = game_data[3] * game_data[1] + game_data[5] # Calculate jmoney based on array
         mgupgrade = game_data[6] * 200
         event_interval = 500 - game_data[6] * game_data[6]
@@ -170,6 +171,8 @@ while True:
                     game_data[9] = game_data[9]*5-game_data[8]
                     level = game_data[9]
                     print(str(level))
+                    boom.set_volume(1)
+                    boom.play()
                     game_data[8] = game_data[8] + 1  # Update job in the array
                     game_data[5] = random.randint(0, 100)  # Update bonus in the array
                     namenumber = random.randint(0, (len(names)-1))

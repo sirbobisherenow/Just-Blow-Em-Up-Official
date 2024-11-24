@@ -19,5 +19,6 @@
  - being able to close the game(surprisingly forgot to make this)
 
 
-Music credits:
+Credits:
 "Pizza" YouTube, uploaded by Doober43, [Link](https://www.youtube.com/watch?v=NbGhHc4TloE&t=42s)
+Soundscrate for the other SFX
