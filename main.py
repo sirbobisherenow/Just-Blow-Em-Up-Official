@@ -6,6 +6,7 @@ import random
 import time
 import pickle  # Import the pickle module
 import os  # Import os module to work with directories
+from button import Button
 
 #Make the colors used in the game
 white = (255, 255, 255)
@@ -50,7 +51,8 @@ def autominer():
     time.sleep(1/mglevel)
     game_data[0] += mglevel  # Update monies in the array
     monies = game_data[0] # Update the local variable
-
+def get_font(size):
+    return pygame.font.Font("Anton-Regular.ttf, size")
 
 ver = "Beta 0.1"
 pygame.init()
@@ -196,3 +198,6 @@ while True:
         clock.tick(game_data[7])
 
     pygame.display.update()
+
+
+
