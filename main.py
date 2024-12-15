@@ -6,7 +6,7 @@ import random
 import time
 import pickle  # Import the pickle module
 import os  # Import os module to work with directories
-from button import Button
+
 
 #Make the colors used in the game
 white = (255, 255, 255)
@@ -198,6 +198,3 @@ while True:
         clock.tick(game_data[7])
 
     pygame.display.update()
-
-
-
